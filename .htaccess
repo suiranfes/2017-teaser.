@@ -1,0 +1,7 @@
+ErrorDocument 404 /redirect/index.html
+
+<ifModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+      RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</ifModule>
