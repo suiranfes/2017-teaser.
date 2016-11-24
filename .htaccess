@@ -1,7 +1,9 @@
 ErrorDocument 404 /redirect/index.html
-
+AddHandler server-parsed .html
 <ifModule mod_rewrite.c>
       RewriteEngine On
+      RewriteCond %{HTTP_HOST} www [NC]
+      RewriteRule ^(.*)$ https://suiranfes.com%{REQUEST_URI} [R=301,L]
       RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
-      RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+      RewriteRule ^(.*)$ https://suiranfes.com%{REQUEST_URI} [R=301,L]
 </ifModule>

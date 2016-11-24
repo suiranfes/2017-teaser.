@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>第65回翠巒祭</title>
+<meta name="description" content="来場者数1万5千人を誇る県内一の文化祭。第65回もよろしくお願いします。" />
+<meta name="keywords" content="スイラン祭" />
+<link rel="shortcut icon" sizes="any" href="X-SUIRAN-t-600.png" type="image/png" />
+
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="第65回翠巒祭"/>
+<meta property="og:description" content="来場者数1万5千人を誇る県内一の文化祭。第65回もよろしくお願いします。" />
+<meta property="og:image" content="https://suiranfes.com/TwitterCard2.png" />
+<meta property="og:url" content="https://suiranfes.com/" />
+<meta property="og:site_name" content="第65回翠巒祭" />
+
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+<link rel="dns-prefetch" href="https://cdn.rawgit.com/" />
+
+<link rel="preload" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff2" />
+<link rel="preload" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff2" />
+<link rel="preload" href="lightfont.woff2" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://suiranfes.com/TwitterCard2.png" />
+<meta name="twitter:title" content="第65回翠巒祭" />
+<meta name="twitter:description" content="来場者数1万5千人を誇る県内一の文化祭。第65回もよろしくお願いします。" />
+<meta name="twitter:site" content="@suiranfes" />
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+<!--<script src="/bpush_loader.js"></script>-->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script>
+$('link[as = "style"]').attr('rel','stylesheet');
+
+var isAndroidBrowser = false
+var ua = window.navigator.userAgent
+if (/Android/.test(ua) && /Linux; U;/.test(ua) && !/Chrome/.test(ua)) {
+  isAndroidBrowser = true
+}
+
+theme        ='No\ SurFace';
+disptop     ='<p class="animated fadeIn disptop" style="font-size:6.3vw;margin-bottom:-1vh;">第65回翠巒祭</p>';
+dispbottom  ='<p class="animated fadeInDown">おもてなし</p>';
+i=0;
+function themeTyping(){
+  $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:7vw;">' + theme.charAt(i) + '</span>');
+  i++;
+  if(i >= theme.length){clearInterval(intervalID);
+  }
+}
+function startShowing(){
+  intervalID = setInterval( function(){themeTyping(theme,i);}, 210 );
+  setTimeout( function(){$('#dispbottom').html(dispbottom)},4000 );
+}
+function socialbutton(){
+var thelabel = "";
+  $('.btn-social').each(function(){
+    thelabel = $(this).attr('data-label');
+    $(this).addClass('btn-' + thelabel);
+  });
+$('.btn-social-action').on('click',function(){
+  var thelabel = $(this).attr('data-label'),socialNw = "",socialAc = "";
+  if(thelabel == "line"){
+    socialNw = "LINE";
+    socialAc = "share";
+  } else if(thelabel == "tweet"){
+    socialNw = "Twitter";
+    socialAc = "Tweet";
+  } else if(thelabel == "fbshare"){
+    socialNw = "Facebook";
+    socialAc = "share";
+  } else if(thelabel == "fblike"){
+    socialNw = "Facebook";
+    socialAc = "like";
+  } else if(thelabel == "gplusshare"){
+    socialNw = "Google+";
+    socialAc = "share";
+  } else if(thelabel == "gplusone"){
+    socialNw = "Google+";
+    socialAc = "+1";
+  } else if(thelabel == "hatena"){
+    socialNw = "HatenaBookmark";
+    socialAc = "Bookmark";
+  } else {
+    socialNw = "Unknown";
+    socialAc = "Unknown";
+  }
+  ga('send', 'social', socialNw, socialAc, 'https://suiranfes.com/', {
+    nonInteraction: false
+  });
+});
+$('.btn-social-link').on('click',function(){
+  ga('send', 'event', 'Social', 'Link', $(this).attr('data-label'), {
+    nonInteraction: false
+  });
+});
+window.gacb_gplusone = function(){
+  ga('send', 'social', 'Google+', '+1', 'https://suiranfes.com/', {
+    nonInteraction: false
+  });
+    if (data['state'] == 'on') {void(0);}
+}
+window.fbAsyncInit = function() {
+FB.Event.subscribe('edge.create',function(response){
+  ga('send', 'social', 'Facebook', 'like', 'https://suiranfes.com/', {
+    nonInteraction: false
+  });
+});
+};
+}
+
+$(function(){
+  if(isAndroidBrowser == true){
+    $('.loading-wrap').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end">タップでブラウザアプリを開きます。</a></p>');
+    return false;
+  }
+  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
+  /*
+  if (Notification.permission === 'default') {
+    Materialize.toast('通知を許可すると、ブログやホームページの更新情報が取得できます', 17000, 'rounded top-toast')
+  }
+  */
+});
+$(document).ready(function(){
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
+    FB.init({
+      appId      : '689195224565280',
+      status     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+  });
+  socialbutton();
+});
+$(window).on('load', function(){
+  if(isAndroidBrowser == true){
+    return false;
+  }
+  $(".loading").fadeOut("fast");
+  $('.disp-wrap').prepend(disptop);
+  setTimeout(startShowing,300);
+  $('.modal').modal();
+  FB.XFBML.parse();
+});
+  </script>
+  <style>
+/*
+ * "Mgen+" is licensed under the SIL Open Font License 1.1.
+ * http://jikasei.me/font/mgenplus/（自家製フォント工房）
+ */
+
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'mgenplus-p-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+/*
+ * "源真ゴシック(GenShinGothic)" is licensed under the SIL Open Font License 1.1.
+ * http://jikasei.me/font/genshin/（自家製フォント工房）
+ */
+
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'GenShinGothic-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/*
+ * "いろは角クラシック(irohakakuC)" is licensed under the SIL Open Font License 1.1.
+ * http://modi.jpn.org/font_irohakakuc.php（MODI工場）
+ */
+ 
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'irohakakuC-w';
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.eot');
+    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'theweb';
+    src: url('lightfont.eot');
+    src: url('lightfont.eot?#iefix') format('embedded-opentype'),url('lightfont.woff2') format('woff2'),url('lightfont.woff') format('woff'),url('lightfont.ttf') format('truetype');
+    font-weight: normal;
+}
+html,body {
+  font-family:"irohakakuC-w","mgenplus-p-w","GenShinGothic-w",sans-serif;
+  width:100vw;
+  height: initial;
+  min-height: 100vh;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  padding:0;
+  margin:0;
+  font-weight:500;
+  -moz-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
+  -webkit-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
+  -ms-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
+  text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
+}
+body{
+  background-color: #eddda6;
+  overflow: hidden;
+}
+main{
+  width:100vw;
+  height: 100%;
+  padding:0;
+  margin:0;
+}
+.gradient{
+  background: rgba(0,0,0,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.11) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.11)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.11) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.11) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.11) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.11) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+  position: relative;
+}
+.noise{
+  background-image: url('noise.png');
+}
+.bg-skin{
+  background-image: url('Bg-Main.png');
+  height: 100%;
+}
+.bg-skin-red{
+  background-image: url('Wa-Shi.png');
+}
+.bg-skin-white{
+  background-image: url('Bg-W-Main.png');
+  height: 100%;
+}
+@media screen and (min-width:600px){
+.noise,.bg-skin,.bg-skin-red,.bg-skin-white{
+  background-size: 500px 500px;
+}
+}
+@media screen and (max-width:600px){
+.noise,.bg-skin,.bg-skin-red,.bg-skin-white{
+  background-size: 300px 300px;
+}
+}
+.schoollogo{
+  height: 70vh;
+  left: -20vh;
+  margin: 5vh 0;
+  position: absolute;
+}
+p,div,span,h1{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.disp-wrap{
+  display: table-cell;
+  vertical-align: middle;
+  text-align:center;
+  width:100vw;
+  height:83vh;
+  max-height:130vw;
+  color: #212121;
+  -moz-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  -webkit-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  -ms-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+}
+#thetheme{
+  display:inline-block;
+  width:calc( 70vw + 3px );
+  height:15vw;
+  font-size:9vw;
+  font-weight:900;
+}
+#themewrap{
+  display: table-cell;
+  height: inherit;
+  vertical-align: middle;
+  text-align:left;
+}
+.disptop{
+  font-family: "theweb",sans-serif;
+}
+#dispbottom{
+  display: block;
+  height: 8.6vw;
+  width: 60vw;
+  margin: -3px auto 0 auto;
+}
+#dispbottom p{
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  font-size:5.2vw;
+  font-weight:700;
+}
+.thetype{
+  position:relative;
+}
+.datewrap{
+  display:inline-block;
+  font-size:calc( 1em + 3vw );
+}
+#description{
+  background-color:#E7001D;
+  color: #000000;
+  -moz-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  -webkit-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  -ms-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  font-size: calc( 1.1rem + 0.3vw );
+}
+.sentences p{
+  margin: 1em 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+footer.page-footer{
+  background-color: #640125;
+  margin-top: 0;
+}
+.light, footer.page-footer .footer-copyright{
+  font-weight:500;
+  line-height: 1em;
+  padding: 1em 0;
+}
+.btn,.dropdown-button {
+  display: inline-block;
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  -ms-text-shadow: none;
+  text-shadow: none;
+  width:flex;
+  margin:3px;
+  text-transform: none;
+  font-weight: 500;
+}
+.btn-tweet,.btn-tweet:hover   { background-color: #1da1f2; color: #f5f8fa !important; }
+.btn-line,.btn-line:hover    { background-color: #00c300; color: #ffffff !important; }
+.btn-fb,.btn-fb:hover { background-color: #ffffff; color: #3b5998 !important; }
+  .btn-fbshare,.btn-fbshare:hover { background-color: #3b5998; color: #ffffff !important; }
+  .btn-fblike,.btn-fblike:hover { background-color: #3b5998; color: #ffffff !important;}
+  .fb-like span{vertical-align: middle !important;margin-top: -5px;}
+.btn-gplus,.btn-gplus:hover   { background-color: #ffffff; color: #dd4b39 !important; }
+  .btn-gplusshare,.btn-gplusshare:hover   { background-color: #dd4b39; color: #ffffff !important; }
+  .btn-gplusone,.btn-gplusone:hover   { background-color: #dd4b39; color: #ffffff !important; }
+  .btn-gplus div{vertical-align: middle !important;margin: -5px -2rem 0 0 !important;}
+.btn-hatena,.btn-hatena:hover  { background-color: #008fde; color: #ffffff !important; }
+.btn-twitter,.btn-twitter:hover   { background-color: #f5f8fa; color: #1da1f2 !important; }
+.btn-fbaccount,.btn-fbaccount:hover { background-color: #ffffff; color: #3b5998 !important; }
+.btn-lineat,.btn-lineat:hover    { background-color: #ffffff; color: #00c300 !important; }
+.btn-insta,.btn-insta:hover    { background-color: #ffffff; color: #00c300 !important; }
+.btn-youtube,.btn-youtube:hover   { background-color: #ffffff; color: #cd201f !important; }
+@media screen and (max-width:450px){
+.btn-social {
+ width:calc( 100% - 6px );
+}
+}
+.loading{
+  background-color: #DDDDDD;
+  display:block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999998;
+}
+.loading-wrap{
+  display: block;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 30% auto;
+}
+emphasis{
+  -webkit-text-emphasis: dot;
+  text-emphasis: dot;
+}
+  </style>
+<!--[if gte IE 9]
+<style type="text/css">
+.gradient {
+filter: none;
+}
+</style>
+<![endif]-->
+</head>
+<body>
+<div id="fb-root"></div>
+<div class="loading">
+<div class="loading-wrap">
+<noscript><p>javascriptを有効にしてご覧ください。</p></noscript>
+<p>Loading......</p>
+</div>
+</div>
+<main>
+<img src="schoollogo.svg" class="schoollogo"></img>
+<div class="gradient">
+<div class="noise">
+<div class="bg-skin">
+<div class="disp-wrap">
+<h1 id="thetheme"><div id="themewrap"></div></h1>
+<div id="dispbottom"></div>
+</div>
+<div id="description">
+<div class="noise">
+<div class="bg-skin">
+<div class="section">
+<div class="container">
+  <div class="section datewrap" style="display:block;width:100%;margin:0 auto;text-align:center;">
+  <p style="width:100%;"><span style="display:inline-block;font-size:0.8em;padding-right:calc( 1.9em + 10vw );">2017年</span><br><span class="thedate">6月3日(土)<br>6月4日(日)</span></p>
+  </div>
+  <div class="section sentences">
+  <p><ruby>翠巒祭<rt>すいらんさい</rt></ruby>は、県下随一の男子高・群馬県立高崎高校(通称:<ruby>高高<rt>タカタカ</rt></ruby>)の文化祭です。</p>
+  <p>第65回のテーマは<b><ruby>"<rt></rt>No <rt>ノー</rt>SurFace<rt>サーフェス</rt>"</ruby></b>。<br><emphasis>おもてがない</emphasis>で、<b>「おもてなし」</b>。洒落でごめんなさい。</p>
+  <p>これまでに、アーチ、模擬店、イベント、壁画など好評を頂いておりました。<br>しかし、部活動やクラスが行う一般展示(校内展示)に足りないものを感じました。</p>
+  <p>「今年はその内側をよくする。」そんな思いも込められています。<br>もちろん外側も、内側に負けないように、今までで最高のものを作っています。</p>
+  <p>皆様をもてなせるよう、準備は既に始まっております。ご期待下さい。</p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="background-color:#e1f5fe;">
+<div class="noise">
+<div class="bg-skin-white">
+<div class="section">
+<div class="container">
+  <div class="section">
+  <span style="font-size:1.3em;">SNSで #翠巒祭 をシェアしよう！</span>
+  <br>
+<a data-label="line" href="line://msg/text/?%0D%0A~~~~~~~~~~~~~~~~~~~~~~~~%0D%0A%E3%80%90%E7%BF%A0%E5%B7%92%E7%A5%AD%28%E3%82%B9%E3%82%A4%E3%83%A9%E3%83%B3%E7%A5%AD%29%E3%80%91%0D%0A%E3%80%80%E7%BE%A4%E9%A6%AC%E7%9C%8C%E7%AB%8B%E9%AB%98%E5%B4%8E%E9%AB%98%E6%A0%A1%EF%BC%88%E9%AB%98%E9%AB%98%EF%BC%89%E3%81%AE%E6%96%87%E5%8C%96%E7%A5%AD%0D%0A%0D%0A%E3%80%80%E6%AC%A1%E5%9B%9E%3A%E7%AC%AC65%E5%9B%9E%0D%0A%E3%80%802017%E5%B9%B4%206%E6%9C%883%E6%97%A5%E3%83%BB6%E6%9C%884%E6%97%A5%28%E5%9C%9F%2C%E6%97%A5%29%0D%0A%E3%80%80%E2%98%86%E6%AF%8E%E5%B9%B4%E9%96%8B%E5%82%AC%EF%BC%81%0D%0A~~~~~~~~~~~~~~~~~~~~~~~~%0D%0A%0D%0A%E9%83%A8%E6%B4%BB%E5%8B%95%E3%82%84%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AE%E6%B0%97%E5%90%88%E3%81%84%E3%81%8C%E5%85%A5%E3%81%A3%E3%81%9F%E4%B8%80%E8%88%AC%E5%B1%95%E7%A4%BA%0D%0A%E3%81%8B%E3%81%8D%E6%B0%B7%20%E3%82%A2%E3%82%A4%E3%82%B9%20%E3%83%81%E3%83%A5%E3%83%AD%E3%82%B9%20%E7%84%BC%E3%81%8D%E3%81%9D%E3%81%B0%20%E3%81%8B%E3%82%89%E6%8F%9A%E3%81%92%E3%81%AA%E3%81%A9%E3%81%AE%E6%A8%A1%E6%93%AC%E5%BA%97%0D%0A%E3%82%A2%E3%83%84%E3%81%84%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8%E3%82%84%E4%BD%93%E8%82%B2%E9%A4%A8%E8%A1%8C%E4%BA%8B%E2%80%A6%E2%80%A6%0D%0A%0D%0A%E7%86%B1%E3%81%8D%E6%BC%A2%E3%81%9F%E3%81%A1%E3%81%AE%E5%A7%BF%E3%82%92%E3%81%9D%E3%81%AE%E7%9B%AE%E3%81%A7%E8%A6%8B%E3%81%AB%E6%9D%A5%E3%81%A6%E3%81%8F%E3%82%8C%E3%80%82%0D%0A%0D%0A%E5%BD%93%E6%97%A5%E3%81%AF%E3%80%81%E9%AB%98%E5%B4%8E%E9%A7%85%E3%81%8B%E3%82%89%E7%84%A1%E6%96%99%E3%81%AE%E3%82%B7%E3%83%A3%E3%83%88%E3%83%AB%E3%83%90%E3%82%B9%E3%81%8C%E5%87%BA%E3%82%8B%E3%81%9E%E3%80%82%0D%0A%0D%0A%E2%98%86%E8%A9%B3%E3%81%97%E3%81%8F%E3%81%AF%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%EF%BC%81%0D%0Ahttp%3A%2F%2Fsuiranfes.com%2F%0D%0A%0D%0A%E2%98%86%E5%85%AC%E5%BC%8FTwitter%E3%82%82%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%88%E3%81%AA%EF%BC%81%0D%0Ahttp%3A%2F%2Ftwitter.com%2Fsuiranfes%0D%0A%0D%0A%23%E7%BF%A0%E5%B7%92%E7%A5%AD%20%23%E3%82%B9%E3%82%A4%E3%83%A9%E3%83%B3%E7%A5%AD%20%23%E9%AB%98%E9%AB%98%20%23%E6%96%87%E5%8C%96%E7%A5%AD" class="waves-effect waves-red btn btn-social btn-social-action"><img src="line.png" style="display: inline; height: 1.5em; margin-bottom: -0.4em;" /> LINE</a>
+<a data-label="tweet" href="https://twitter.com/intent/tweet?url=https://suiranfes.com/&text=%e3%80%90%20%e7%9c%8c%e7%ab%8b%e9%ab%98%e5%b4%8e%e9%ab%98%e6%a0%a1%e6%96%87%e5%8c%96%e7%a5%ad%20%23%e7%bf%a0%e5%b7%92%e7%a5%ad%20%e3%80%91%0d%0a%0d%0a%e3%83%bb%e9%ab%98%e9%ab%98%e3%81%aa%e3%82%89%e3%81%a7%e3%81%af%e3%81%ae%e3%80%88%e3%81%8a%e3%82%82%e3%81%a6%e3%81%aa%e3%81%97%e3%80%89%0d%0a%e3%83%bb%e9%a7%85%e3%81%8b%e3%82%89%e7%84%a1%e6%96%99%e3%82%b7%e3%83%a3%e3%83%88%e3%83%ab%e3%83%90%e3%82%b9%0d%0a%e3%83%bb%e6%a8%a1%e6%93%ac%e5%ba%97%e3%82%82%e5%85%85%e5%ae%9f%0d%0a%e3%83%bb%e8%a6%8b%e3%81%a6%e3%81%9f%e3%81%ae%e3%81%97%e3%81%84%e3%83%bb%e3%82%84%e3%81%a3%e3%81%a6%e9%9d%a2%e7%99%bd%e3%81%84%20%e9%83%a8%e6%b4%bb%e5%8b%95%e3%83%bb%e3%82%af%e3%83%a9%e3%82%b9%e5%b1%95%e7%a4%ba%0d%0a%e3%83%bb%e3%82%a2%e3%83%84%e3%81%84%e3%82%b9%e3%83%86%e3%83%bc%e3%82%b8%0d%0a%0d%0a%e8%a9%b3%e3%81%97%e3%81%8f%e3%81%af%e3%83%9b%e3%83%bc%e3%83%a0%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%a7%ef%bc%81" target="_blank" class="waves-effect waves-red btn btn-social btn-social-action" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+<!-- Dropdown Trigger -->
+<a class='dropdown-button waves-effect waves-red btn btn-social btn-fb' href='javascript:void(0)' data-activates='fb-drop'><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook <div class="fb-like" data-href="https://suiranfes.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></a>
+
+<!-- Dropdown Structure -->
+<ul id='fb-drop' class='dropdown-content'>
+<li class="btn-fbshare">
+<a data-label="fbshare" href="https://www.Facebook.com/sharer/sharer.php?u=https://suiranfes.com/" class="btn-social-action" target="_blank" style="color:#ffffff">Share</a>
+</li>
+</ul>
+
+<!-- Dropdown Trigger -->
+<a class='dropdown-button waves-effect waves-red btn btn-social btn-gplus' href='javascript:void(0)' data-activates='gplus-drop'><i class="fa fa-google-plus" aria-hidden="true"></i> Google+ <div class="g-plusone" data-callback="gacb_gplusone" data-href="https://suiranfes.com/"></div></a>
+
+<!-- Dropdown Structure -->
+<ul id='gplus-drop' class='dropdown-content btn-gplus'>
+<li class="btn-gplusshare">
+<a data-label="gplus" href="https://plus.google.com/share?url=suiranfes.com" class="btn-social-action" target="_blank" style="color:#ffffff">Share</a>
+</li>
+</ul>
+
+<a data-label="hatena" href="http://b.hatena.ne.jp/entry/suiranfes.com" class="hatena-bookmark-button waves-effect waves-red btn btn-social btn-social-action" data-hatena-bookmark-layout="simple" title="%20%2d%20%e7%bf%a0%e5%b7%92%e7%a5%ad%20%2d%20%3a%20%e9%ab%98%e5%b4%8e%e9%ab%98%e6%a0%a1%e6%96%87%e5%8c%96%e7%a5%ad"><img src="hatenabookmark-logomark.svg" style="display: inline; height: 1.5em; margin-bottom: -0.4em;"> HATENA BookMark</a>
+</div>
+  <div class="section">
+  <span style="font-size:1.3em;">翠巒祭の最新情報を手に入れよう！</span>
+  <br>
+  <!--
+  <a data-label="lineat" href="javascript:void(0);" class="waves-effect waves-red btn btn-social btn-social-link"><img src="lineat.png" style="display: inline; height: 1.5em; margin-bottom: -0.4em;"> 準備中</a>
+  <a data-label="insta" href="javascript:void(0);" class="waves-effect waves-red btn btn-social btn-social-link"><i class="fa fa-instagram" aria-hidden="true"></i> 準備中</a>
+  <a data-label="fbaccount" href="https://Facebook.com/191043628018751" class="waves-effect waves-red btn btn-social btn-social-action" target="_blank"><i class="fa fa-Facebook-official"></i> Facebook</a>
+  -->
+  <a data-label="twitter" href="https://twitter.com/suiranfes" class="waves-effect waves-red btn btn-social btn-social-link" target="_blank"><i class="fa fa-twitter-square"></i> @suiranfes</a>
+  <a data-label="youtube" href="https://youtube.com/翠巒祭" class="waves-effect waves-red btn btn-social btn-social-link" target="_blank"><i class="fa fa-youtube"></i> 翠巒祭公式チャンネル</a>
+  </div>
+</div>
+<!--
+-----------------------SNSの覚書------------------------
+
+どういう仕組みでリンクしてるかは、google先生に聞いてほしいな
+
+ちなみに、下の文章は、
+http://www.tagindex.com/tool/url.html
+これの文字コードをUTF-8にしてわちゃわちゃコードがあるとこに張り付ける
+置き換えはFeelingで...
+
+-----------------------文章の覚書-----------------------
+
+!!!!!!!!!!!!!!!!!!!!!!!!! LINE !!!!!!!!!!!!!!!!!!!!!!!!!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+【翠巒祭(スイラン祭)】
+　群馬県立高崎高校（高高）の文化祭
+
+　次回:第65回
+　2017年 6月3日・6月4日(土,日)
+　☆毎年開催！
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+部活動やクラスの気合いが入った一般展示
+かき氷 アイス チュロス 焼きそば から揚げなどの模擬店
+アツいイベントステージや体育館行事……
+
+熱き漢たちの姿をその目で見に来てくれ。
+
+当日は、高崎駅から無料のシャトルバスが出るぞ。
+
+☆詳しくはホームページをチェック！
+https://suiranfes.com/
+
+☆公式Twitterもフォローしてくれよな！
+http://twitter.com/suiranfes
+
+#翠巒祭 #スイラン祭 #高高 #文化祭
+!!!!!!!!!!!!!!!!!!!!!!!! LINE !!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!! Twitter !!!!!!!!!!!!!!!!!!!!!!!!
+【 県立高崎高校文化祭 #翠巒祭 】
+
+・高高ならではの〈おもてなし〉
+・駅から無料シャトルバス
+・模擬店も充実
+・見てたのしい・やって面白い 部活動・クラス展示
+・アツいステージ
+
+詳しくはホームページで！
+!!!!!!!!!!!!!!!!!!!!!!! Twitter !!!!!!!!!!!!!!!!!!!!!!!!
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="page-footer white-text">
+<div class="noise" style="margin-top:-20px;">
+<div class="bg-skin" style="margin-top:-20px;">
+<div class="container">
+<div class="section row">
+<p>第65回翠巒祭 ティザーサイト</p>
+<div class="col s12 m6 l4">
+<div class="section">
+<p><a class="btn-flat white-text" href="http://2014.suiranfes.com/index2.html">2014年サイト</a><p>
+<p><a class="btn-flat white-text" href="http://2015.suiranfes.com/index2.html">2015年サイト</a><p>
+<p><a class="btn-flat white-text" href="http://2016.suiranfes.com/index2.html">2016年サイト <span style="color:orange">New:一般展示結果発表！</a><p>
+</div>
+</div>
+<div class="col s12 m6 l4">
+<div class="section">
+<p><a class="waves-effect waves-light btn blue-grey lighten-5 black-text" href="https://goo.gl/forms/DpBjI9uorEJKjHnu1" target="_blank">お問い合わせフォーム</a><p>
+<p></p>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+© 2016 群馬県立高崎高等学校 翠巒祭実行委員会
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-86297566-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- ####################### Modals ####################### -->
+
+</body>
+</html>
