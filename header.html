@@ -224,29 +224,18 @@ main{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
   position: relative;
 }
-.noise{
-  background-image: url('noise.png');
-}
-.bg-skin{
-  background-image: url('Bg-Main.png');
+.bg-normal{
+  background-image: url('background-g.png');
   height: 100%;
 }
-.bg-skin-red{
-  background-image: url('Wa-Shi.png');
+.bg-red{
+  background-color: #E7001D;
+  background-image: url('background-n.png');
 }
-.bg-skin-white{
-  background-image: url('Bg-W-Main.png');
+.bg-white{
+  background-color: #e1f5fe;
+  background-image: url('background-s.png');
   height: 100%;
-}
-@media screen and (min-width:600px){
-.noise,.bg-skin,.bg-skin-red,.bg-skin-white{
-  background-size: 500px 500px;
-}
-}
-@media screen and (max-width:600px){
-.noise,.bg-skin,.bg-skin-red,.bg-skin-white{
-  background-size: 300px 300px;
-}
 }
 .schoollogo{
   height: 70vh;
@@ -394,7 +383,9 @@ emphasis{
   -webkit-text-emphasis: dot;
   text-emphasis: dot;
 }
-div#main{
+#nosurface{
+  padding-top: 4vh;
+  padding-bottom: 4vh;
   min-height: 100vh;
 }
   </style>

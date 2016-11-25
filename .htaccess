@@ -2,7 +2,11 @@ ErrorDocument 404 /redirect/index.html
 AddHandler server-parsed .html
 <ifModule mod_rewrite.c>
       RewriteEngine On
+      RewriteCond %{REQUEST_URI} panten|access [NC]
+      RewriteRule ^(.*)$ https://2016.suiranfes.com%{REQUEST_URI} [R=301,L]
       RewriteCond %{HTTP_HOST} www [NC]
+      RewriteRule ^(.*)$ https://suiranfes.com%{REQUEST_URI} [R=301,L]
+      RewriteCond %{HTTP_HOST} 2017 [NC]
       RewriteRule ^(.*)$ https://suiranfes.com%{REQUEST_URI} [R=301,L]
       RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
       RewriteRule ^(.*)$ https://suiranfes.com%{REQUEST_URI} [R=301,L]
