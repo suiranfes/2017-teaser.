@@ -1,24 +1,25 @@
 <base href="https://suiranfes.com/">
 <link rel="shortcut icon" sizes="any" href="X-SUIRAN-t-600.png" type="image/png" />
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
-<link rel="dns-prefetch" href="https://cdn.rawgit.com/" />
 
-<link rel="preload" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff2" />
-<link rel="preload" href="https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff2" />
 <link rel="preload" href="lightfont.woff2" />
 
+<link rel="preload" as="style" href="./lib/webfonts/v6.0.0/fontface.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+$('link[as = "style"]').attr('rel','stylesheet');
+</script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
 <!--<script src="/bpush_loader.js"></script>-->
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <script>
-$('link[as = "style"]').attr('rel','stylesheet');
-
 var isAndroidBrowser = false
 var ua = window.navigator.userAgent
 if (/Android/.test(ua) && /Linux; U;/.test(ua) && !/Chrome/.test(ua)) {
@@ -122,66 +123,6 @@ ga('create', 'UA-86297566-2', 'auto');
 ga('send', 'pageview');
   </script>
   <style>
-/*
- * "Mgen+" is licensed under the SIL Open Font License 1.1.
- * http://jikasei.me/font/mgenplus/（自家製フォント工房）
- */
-
-@font-face {
-    font-family: 'mgenplus-p-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-medium.ttf') format('truetype');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'mgenplus-p-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-bold.ttf') format('truetype');
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'mgenplus-p-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/mgenplus-p-black.ttf') format('truetype');
-    font-weight: 900;
-}
-
-/*
- * "源真ゴシック(GenShinGothic)" is licensed under the SIL Open Font License 1.1.
- * http://jikasei.me/font/genshin/（自家製フォント工房）
- */
-
-@font-face {
-    font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Medium.ttf') format('truetype');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'GenShinGothic-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.eot?#iefix') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/GenShinGothic-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
-
-/*
- * "いろは角クラシック(irohakakuC)" is licensed under the SIL Open Font License 1.1.
- * http://modi.jpn.org/font_irohakakuc.php（MODI工場）
- */
- 
-@font-face {
-    font-family: 'irohakakuC-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Medium.ttf') format('truetype');
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'irohakakuC-w';
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.eot');
-    src: url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.eot') format('embedded-opentype'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff2') format('woff2'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.woff') format('woff'),url('https://cdn.rawgit.com/tamaina/The-Japanese-Web-Fonts/v5.2.1/fonts/irohakakuC-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
-
 @font-face {
     font-family: 'theweb';
     src: url('lightfont.eot');
