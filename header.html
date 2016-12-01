@@ -139,10 +139,10 @@ html,body {
   padding:0;
   margin:0;
   font-weight:500;
-  -moz-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
-  -webkit-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
-  -ms-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
-  text-shadow: 0px 0px 10px rgba(231, 0, 29, 1);
+  -moz-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
+  -webkit-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
+  -ms-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
+  text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
 }
 body{
   background-color: #eddda6;
@@ -189,19 +189,6 @@ p,div,span,h1{
   margin: 0;
   border: 0;
 }
-.disp-wrap{
-  display: table-cell;
-  vertical-align: middle;
-  text-align:center;
-  width:100vw;
-  height:83vh;
-  max-height:130vw;
-  color: #212121;
-  -moz-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
-  -webkit-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
-  -ms-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
-  text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
-}
 .paragraphs{
   display: table-cell;
   width:100vw;
@@ -211,51 +198,6 @@ p,div,span,h1{
   -webkit-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
   -ms-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
   text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
-}
-#thetheme{
-  display:inline-block;
-  width:calc( 70vw + 3px );
-  height:15vw;
-  font-size:9vw;
-  font-weight:900;
-}
-#themewrap{
-  display: table-cell;
-  height: inherit;
-  vertical-align: middle;
-  text-align:left;
-}
-.disptop{
-  font-family: "theweb",sans-serif;
-}
-#dispbottom{
-  display: block;
-  height: 8.6vw;
-  width: 60vw;
-  margin: -3px auto 0 auto;
-}
-#dispbottom p{
-  display: inline-block;
-  width: inherit;
-  text-align: center;
-  font-size:5.2vw;
-  font-weight:700;
-}
-.thetype{
-  position:relative;
-}
-.datewrap{
-  display:inline-block;
-  font-size:calc( 1em + 3vw );
-}
-#description{
-  background-color:#E7001D;
-  color: #000000;
-  -moz-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
-  -webkit-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
-  -ms-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
-  font-size: calc( 1.1rem + 0.3vw );
 }
 .sentences p{
   margin: 1em 0;
@@ -323,11 +265,6 @@ footer.page-footer{
 emphasis{
   -webkit-text-emphasis: dot;
   text-emphasis: dot;
-}
-#nosurface{
-  padding-top: 4vh;
-  padding-bottom: 4vh;
-  min-height: 100vh;
 }
   </style>
 <!--[if gte IE 9]

@@ -73,15 +73,91 @@
 そういって、突然現れた「崇拝者たち」は消え去っていきました。
 
 -->
+<!--SSI開始...-->
 
 <!--#include virtual="header.html" -->
+
+<!--SSI終了...-->
+<style>
+#nosurface{
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  min-height: 100vh;
+}
+#thetheme{
+  display:inline-block;
+  width:calc( 80vw + 0.1px );
+  height:17vw;
+  font-size:12vw;
+  font-weight:900;
+}
+#themewrap{
+  display: table-cell;
+  height: inherit;
+  vertical-align: middle;
+  text-align:left;
+}
+#disptop{
+  font-family: "theweb",sans-serif;
+  font-size:calc(0.5rem + 5vw);
+  margin-bottom:-1vh;
+}
+#dispbottom{
+  display: block;
+  height: 9vw;
+  width: 60vw;
+  margin: -3px auto 0 auto;
+}
+#dispbottom p{
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  font-size:calc(0.5rem + 5vw);
+  font-weight:700;
+}
+.thetype{
+  position:relative;
+}
+.datewrap{
+  display:inline-block;
+  font-size:calc( 1em + 3vw );
+}
+#description{
+  background-color:#E7001D;
+  color: #000000;
+  -moz-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  -webkit-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  -ms-text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1), 0px 0px 10px rgba(255, 255, 255, 1);
+  font-size: calc( 1.1rem + 0.3vw );
+}
+.disp-wrap{
+  display: table-cell;
+  vertical-align: middle;
+  text-align:center;
+  width:100vw;
+  height:83vh;
+  max-height:130vw;
+  color: #212121;
+  -moz-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  -webkit-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  -ms-text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+  text-shadow: 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1), 0px 0px 1vw rgba(231, 0, 29, 1);
+}
+</style>
 <script>
 theme        ='No\ SurFace';
-disptop     ='<p class="animated fadeIn disptop" style="font-size:6.3vw;margin-bottom:-1vh;">第65回翠巒祭</p>';
-dispbottom  ='<p class="animated fadeInDown">おもてなし</p>';
+disptop     ='<p class="animated fadeIn" id="disptop">第65回翠巒祭</p>';
+dispbottom  ='<p class="animated fadeInDown"">おもてなし</p>';
 i=0;
 function themeTyping(){
+         if(i==0) {
+  $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:9vw;">' + theme.charAt(i) + '</span>');
+  } else if(i==2) {
   $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:7vw;">' + theme.charAt(i) + '</span>');
+  } else {
+  $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:8vw;">' + theme.charAt(i) + '</span>');
+  }
   i++;
   if(i >= theme.length){clearInterval(intervalID);
   }
