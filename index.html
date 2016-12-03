@@ -79,12 +79,18 @@
 
 <!--SSI終了...-->
 <style>
+@font-face {
+    font-family: 'theweb';
+    src: url('lightfont.eot');
+    src: url('lightfont.eot?#iefix') format('embedded-opentype'),url('lightfont.woff2') format('woff2'),url('lightfont.woff') format('woff'),url('lightfont.ttf') format('truetype');
+    font-weight: normal;
+}
 #nosurface{
   min-height: 80vh;
 }
 #thetheme{
   display:inline-block;
-  width:calc( 80vw + 3px );
+  width:calc( 76vw + 3px );
   height:17vw;
   font-size:12vw;
   font-weight:900;
@@ -94,6 +100,9 @@
   height: inherit;
   vertical-align: middle;
   text-align:left;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 #disptop{
   font-family: "theweb",sans-serif;
@@ -144,14 +153,15 @@
 }
 </style>
 <script>
-theme        ='No\ SurFace';
-disptop     ='<p class="animated fadeIn" id="disptop">第65回翠巒祭</p>';
-dispbottom  ='<p class="animated fadeInDown"">おもてなし</p>';
+flag        = true;
+theme       ='No\ SurFace';
+disptop     ='<p class="animated fadeIn">第65回翠巒祭</p>';
+dispbottom  ='<p class="animated fadeInDown">おもてなし</p>';
 i=0;
 function themeTyping(){
-         if(i==0) {
-  $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:9vw;">' + theme.charAt(i) + '</span>');
-  } else if(i==2) {
+if(i==0) {
+  $("#themewrap").html('<span class="animated flipInX thetype" style="display:inline-block;width:9vw;">' + theme.charAt(i) + '</span>');
+  } else if(i==2 || i==5 || i==6 || i==8 || i==9) {
   $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:7vw;">' + theme.charAt(i) + '</span>');
   } else {
   $("#themewrap").append('<span class="animated flipInX thetype" style="display:inline-block;width:8vw;">' + theme.charAt(i) + '</span>');
@@ -161,23 +171,35 @@ function themeTyping(){
   }
 }
 function startShowing(){
-  intervalID = setInterval( function(){themeTyping(theme,i);}, 210 );
-  setTimeout( function(){$('#dispbottom').html(dispbottom)},4000 );
+  setTimeout( function(){$('#disptop').html("");$('#themewrap').html("");$('#dispbottom').html("")},1);
+  setTimeout( function(){$('#disptop').html(disptop);},450);
+  setTimeout( function(){intervalID = setInterval( function(){themeTyping(theme,i);}, 200 );},600);
+  setTimeout( function(){$('#dispbottom').html(dispbottom)},3800 );
 }
 
 $(window).on('load', function(){
-  setTimeout(startShowing,300);
+  if(flag==true){
+    flag = !flag;
+  setTimeout(startShowing,100);
+  }
+});
+$(function(){
+  if(flag==true){
+    flag = !flag;
+  setTimeout(startShowing,6100);
+  }
 });
 </script>
 </head>
 <body>
 <!--#include virtual="navigation.html" -->
 <main>
-<img src="schoollogo.svg" class="schoollogo"></img>
+<img src="lib/images/schoollogo.svg" class="schoollogo"></img>
 <div id="nosurface" class="gradient bg-normal">
 <div class="disp-wrap">
-<h1 id="thetheme"><div id="themewrap"></div></h1>
-<div id="dispbottom"></div>
+<div id="disptop">第65回翠巒祭</div>
+<div id="thetheme"><h1 id="themewrap">No Surface</h1></div>
+<div id="dispbottom">おもてなし</div>
 </div></div>
 <div id="description" class="bg-red">
 <div class="section">
@@ -187,7 +209,7 @@ $(window).on('load', function(){
   </div>
   <div class="section sentences">
   <p><ruby>翠巒祭<rt>すいらんさい</rt></ruby>は、県下随一の男子高・群馬県立高崎高校(通称:<ruby>高高<rt>タカタカ</rt></ruby>)の文化祭です。</p>
-  <p>第65回のテーマは<b><ruby>"<rt></rt>No <rt>ノー</rt>SurFace<rt>サーフェス</rt>"</ruby></b>。<br><emphasis>おもてがない</emphasis>で、<b>「おもてなし」</b>。洒落でごめんなさい。</p>
+  <p>第65回のテーマは<b><ruby>"<rt></rt>No<rt>ノー</rt> <rt> </rt>SurFace<rt>サーフェス</rt>"</ruby></b>。<br><emphasis>おもてがない</emphasis>で、<b>「おもてなし」</b>。洒落でごめんなさい。</p>
   <p>これまでに、アーチ、模擬店、イベント、壁画など好評を頂いておりました。<br>しかし、部活動やクラスが行う一般展示(校内展示)に足りないものを感じました。</p>
   <p>「今年はその内側をよくする。」そんな思いも込められています。<br>もちろん外側も、内側に負けないように、今までで最高のものを作っています。</p>
   <p>皆様をもてなせるよう、準備は既に始まっております。ご期待下さい。</p>

@@ -1,13 +1,15 @@
 <base href="https://suiranfes.com/">
+
 <link rel="shortcut icon" sizes="any" href="X-SUIRAN-t-600.png" type="image/png" />
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
 
-<link rel="preload" href="lightfont.woff2" />
+<link rel="preload" href="lightfont.woff2" /> 
+<link rel="preload" href="lib/webfonts/v6.0.0/mgenplus-p-bold.woff2" /> 
 
-<link rel="preload" as="style" href="./lib/webfonts/v6.0.0/fontface.css" />
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
+<link rel="stylesheet" href="lib/webfonts/v6.0.0/fontface.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -16,7 +18,7 @@ $('link[as = "style"]').attr('rel','stylesheet');
 </script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async defer></script>
 <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
 <!--<script src="/bpush_loader.js"></script>-->
 <script>
@@ -88,14 +90,12 @@ $(function(){
     $('.loading-wrap').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end">タップでブラウザアプリを開きます。</a></p>');
     return false;
   }
-  setTimeout( '$(".loading").fadeOut("slow");' , 10000);
+  setTimeout( '$(".loading").fadeOut("slow");' , 6000);
   /*
   if (Notification.permission === 'default') {
     Materialize.toast('通知を許可すると、ブログやホームページの更新情報が取得できます', 17000, 'rounded top-toast')
   }
   */
-});
-$(document).ready(function(){
   $.ajaxSetup({ cache: true });
   $.getScript('//connect.facebook.net/ja_JP/sdk.js', function(){
     FB.init({
@@ -106,6 +106,8 @@ $(document).ready(function(){
     });
     $('#loginbutton,#feedbutton').removeAttr('disabled');
   });
+});
+$(document).ready(function(){
   socialbutton();
 });
 $(window).on('load', function(){
@@ -113,18 +115,11 @@ $(window).on('load', function(){
     return false;
   }
   $(".loading").fadeOut("fast");
-  $('.disp-wrap').prepend(disptop);
   $('.modal').modal();
   FB.XFBML.parse();
 });
   </script>
   <style>
-@font-face {
-    font-family: 'theweb';
-    src: url('lightfont.eot');
-    src: url('lightfont.eot?#iefix') format('embedded-opentype'),url('lightfont.woff2') format('woff2'),url('lightfont.woff') format('woff'),url('lightfont.ttf') format('truetype');
-    font-weight: normal;
-}
 html,body {
   font-family:"irohakakuC-w","mgenplus-p-w","GenShinGothic-w",sans-serif;
   width:100vw;
@@ -162,17 +157,16 @@ main{
   position: relative;
 }
 .bg-normal{
-  background-image: url('background-g.png');
+  background-image: url('lib/bgimages/v2.0/background-g.png');
   height: 100%;
 }
 .bg-red{
   background-color: #E7001D;
-  background-image: url('background-n.png');
+  background-image: url('lib/bgimages/v2.0/background-n.png');
 }
 .bg-white{
   background-color: #e1f5fe;
-  background-image: url('background-s.png');
-  height: 100%;
+  background-image: url('lib/bgimages/v2.0/background-s.png');
 }
 .schoollogo{
   height: 70vh;
@@ -256,7 +250,7 @@ footer.page-footer{
   top: 0;
   left: 0;
   text-align: center;
-  margin: 30% auto;
+  margin: auto auto;
 }
 emphasis{
   -webkit-text-emphasis: dot;
