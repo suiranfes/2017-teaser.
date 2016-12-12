@@ -1,0 +1,92 @@
+[
+    {
+        "id" : "0",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Joga",
+        "ja_jp" : "嫦娥よ、見てるか！？",
+        "description" : "嫦娥よ、見てるか！？ ----『東方紺珠伝』6面ボス 純狐 "
+    },
+    {
+        "id" : "1",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Ran",
+        "ja_jp" : "らんしゃまー",
+        "description" : "らんしゃまー ----橙"
+    },
+    {
+        "id" : "3",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Rumia",
+        "ja_jp" : "そーなのかー",
+        "description" : "そーなのかー ----ルーミア"
+    },
+    {
+        "id" : "2",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Flum",
+        "ja_jp" : "コインいっこ",
+        "description" : "コインいっこ ----『東方紅魔郷』Extraボス フランドール・スカーレット"
+    },
+    {
+        "id" : "4",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Patche",
+        "ja_jp" : "むきゅー",
+        "description" : "むきゅー ----パチュリー・ノーレッジ"
+    },
+    {
+        "id" : "5",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Aya",
+        "ja_jp" : "あやややや……",
+        "description" : "あやややや…… ----射命丸文",
+        "bgcolor" : "#00FFFF"
+    },
+    {
+        "id" : "6",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Nitori",
+        "ja_jp" : "ひゅい!?",
+        "description" : "ひゅい!? ----河城にとり"
+    },
+    {
+        "id" : "7",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Utsuho",
+        "ja_jp" : "うにゅ？",
+        "description" : "うにゅ？ ----霊烏路空"
+    },
+    {
+        "id" : "8",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Turbo",
+        "ja_jp" : "いざ、南無三！",
+        "description" : "いざ、南無三！ ----聖白蓮"
+    },
+    {
+        "id" : "9",
+        "level" : "1",
+        "status" : "enable",
+        "name" : "Sagume",
+        "ja_jp" : "…そうではない",
+        "description" : "…そうではない ----稀神サグメ"
+    },
+    {
+        "id" : "10",
+        "level" : "2",
+        "status" : "enable",
+        "name" : "Suiran-Kogei",
+        "ja_jp" : "翠巒工芸",
+        "description" : "翠巒工芸 高崎市八千代町2丁目4-32 TEL:027-399-0117",
+        "URL" : "https://suiranfes.com/"
+    }
+]

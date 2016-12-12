@@ -6,6 +6,7 @@
 <link rel="preload" href="lightfont.woff2" /> 
 <link rel="preload" href="lib/webfonts/v6.0.0/mgenplus-p-bold.woff2" /> 
 
+<link rel="stylesheet" href="lib/icons/v1.1.1/thsicons.css" />
 <link rel="stylesheet" href="lib/webfonts/v6.0.0/fontface.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" />
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
@@ -84,13 +85,22 @@ FB.Event.subscribe('edge.create',function(response){
 });
 };
 }
-
+function StartUp(){
+if(flag == true){
+  if( page_id == "index" ){
+  $('#disptop').html('');$('#themewrap').html('');$('#dispbottom').html('');
+  setTimeout(startShowing,100);
+  }
+  $(".loading").fadeOut("fast");
+ flag = !flag;
+ }
+}
 $(function(){
   if(isAndroidBrowser == true){
     $('.loading-wrap').html('<p><a href="intent://suiranfes.com#Intent;scheme=https;action=android.intent.action.VIEW;end">タップでブラウザアプリを開きます。</a></p>');
     return false;
   }
-  setTimeout( '$(".loading").fadeOut("slow");' , 6000);
+  setTimeout( StartUp, 6000);
   /*
   if (Notification.permission === 'default') {
     Materialize.toast('通知を許可すると、ブログやホームページの更新情報が取得できます', 17000, 'rounded top-toast')
@@ -109,19 +119,20 @@ $(function(){
 });
 $(document).ready(function(){
   socialbutton();
+  if(page_id=="index"){
+  }
 });
 $(window).on('load', function(){
   if(isAndroidBrowser == true){
     return false;
   }
-  $(".loading").fadeOut("fast");
   $('.modal').modal();
-  FB.XFBML.parse();
+  StartUp();
 });
   </script>
   <style>
 html,body {
-  font-family:"irohakakuC-w","mgenplus-p-w","GenShinGothic-w",sans-serif;
+  font-family:"irohakakuC-w","mgenplus-p-w","Hiragino Sans","GenShinGothic-w",sans-serif;
   width:100vw;
   height: initial;
   min-height: 100vh;
@@ -134,7 +145,11 @@ html,body {
   -webkit-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
   -ms-text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
   text-shadow: 0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 1),0px 0px 10px rgba(231, 0, 29, 0.2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+.imgintext{
+  filter: drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 0.2));}
 body{
   background-color: #eddda6;
   overflow: hidden;
