@@ -149,7 +149,14 @@ html,body {
   -moz-osx-font-smoothing: grayscale;
 }
 .imgintext{
-  filter: drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 0.2));}
+  filter: drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 1)),drop-shadow(0px 0px 10px rgba(231, 0, 29, 0.2));
+}
+.faintshadow {
+  -moz-text-shadow: 0px 0px 10px rgba(231, 0, 29, 0.8),0px 0px 10px rgba(231, 0, 29, 0.6),0px 0px 10px rgba(231, 0, 29, 0.2);
+  -webkit-text-shadow: 0px 0px 10px rgba(231, 0, 29, 0.8),0px 0px 10px rgba(231, 0, 29, 0.6),0px 0px 10px rgba(231, 0, 29, 0.2);
+  -ms-text-shadow: 0px 0px 10px rgba(231, 0, 29, 0.8),0px 0px 10px rgba(231, 0, 29, 0.6),0px 0px 10px rgba(231, 0, 29, 0.2);
+  text-shadow: 0px 0px 10px rgba(231, 0, 29, 0.8),0px 0px 10px rgba(231, 0, 29, 0.6),0px 0px 10px rgba(231, 0, 29, 0.2);
+}
 body{
   background-color: #eddda6;
   overflow: hidden;
@@ -287,6 +294,12 @@ footer.page-footer{
 emphasis{
   -webkit-text-emphasis: dot;
   text-emphasis: dot;
+}
+.centering{
+  text-align: center;
+}
+small {
+  font-size: 0.7em;
 }
   </style>
 <!--[if gte IE 9]
