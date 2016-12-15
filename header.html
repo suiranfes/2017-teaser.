@@ -291,12 +291,21 @@ footer.page-footer{
   text-align: center;
   margin: auto auto;
 }
+ol{
+counter-reset:number; 
+list-style:none; 
+margin:0;
+padding:0;
+}
+ol li:before{
+counter-increment: number;
+content: counter(number) ".";
+margin-right: 0.54em;
+font-weight: 700;
+}
 emphasis{
   -webkit-text-emphasis: dot;
   text-emphasis: dot;
-}
-.centering{
-  text-align: center;
 }
 small {
   font-size: 0.7em;
