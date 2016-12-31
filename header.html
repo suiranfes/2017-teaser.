@@ -13,6 +13,7 @@
 <link rel="stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="lib/js/jquery-yycountdown.min.js"></script>
 
 <script>
 $('link[as = "style"]').attr('rel','stylesheet');
@@ -121,6 +122,13 @@ $(document).ready(function(){
   socialbutton();
   if(page_id=="index"){
   }
+  $('#timer').yycountdown({
+    endDateTime   : '2017/06/03 12:00:00',  //カウントダウン終了日時
+    unit          : {d: '日', h: '時間', m: '分', s: '秒'},  //カウントダウン単位
+    complete      : function(_this){  //カウントダウン完了時のコールバック
+                      _this.find('.yycountdown-box').html("開催中!!");
+                    }
+  });
 });
 $(window).on('load', function(){
   if(isAndroidBrowser == true){
@@ -129,6 +137,7 @@ $(window).on('load', function(){
   $('.modal').modal();
   StartUp();
 });
+
   </script>
   <style>
 html,body {
@@ -168,6 +177,9 @@ main{
   height: 100%;
   padding:0;
   margin:0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 500;
 }
 .gradient{
   background: rgba(0,0,0,0);
@@ -272,6 +284,43 @@ footer.page-footer{
 }
 .carousel-slider{
   height: 170px !important;
+}
+.top-cnt-bar{
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  color:#ffffff;
+  background-color: #a50014;
+  background-image: url('lib/bgimages/v2.0/background-g.png');
+} 
+#timer{
+  display: inline;
+}
+#timer .yycountdown-box .yyc-day{
+  font-size:1.9em;
+  color:#54c6ff;
+  font-weight: 900;
+}
+#timer .yycountdown-box .yyc-hou{
+  font-size:1.9em;
+  color:#ffd738;
+  font-weight: 900;
+}
+#timer .yycountdown-box .yyc-min{
+  font-size:1.9em;
+  color:#91c996;
+  font-weight: 900;
+}
+#timer .yycountdown-box .yyc-sec{
+  font-size:1.9em;
+  color:#e2788a;
+  font-weight: 900;
+}
+#timer .yycountdown-box .yyc-day-text,
+#timer .yycountdown-box .yyc-hou-text,
+#timer .yycountdown-box .yyc-min-text,
+#timer .yycountdown-box .yyc-sec-text{
+  font-size:1.2em;
 }
 .loading{
   background-color: #DDDDDD;
